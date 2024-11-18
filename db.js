@@ -1,5 +1,4 @@
 const mongoose=require('mongoose')
-// const shortid = require('shortid');
 const { nanoid } = require('nanoid');
 
 const Schema=mongoose.Schema;

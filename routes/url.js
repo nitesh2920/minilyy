@@ -1,8 +1,6 @@
-const mongoose =require('mongoose')
 const {Router}=require('express')
 const {urlModel,userModel}=require('../db')
-const jwt=require('jsonwebtoken')
-const shortid=require('shortid');
+// const jwt=require('jsonwebtoken')
 
 
 const urlRouter=Router();

@@ -3,7 +3,7 @@ const mongoose=require('mongoose');
 const cors=require('cors')
 const dotenv=require('dotenv')
 const app=express()
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 dotenv.config()
 const urlRouter=require('./routes/url')
@@ -27,6 +27,6 @@ app.use("/api/v1/url",urlRouter)
 
 
 app.listen(port,()=>{
-    console.log("Server is connected");
+    console.log("Server is connected",port);
 })
 

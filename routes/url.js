@@ -40,7 +40,7 @@ urlRouter.post('/shorten',async(req,res)=>{
         await url.save();
         return res.status(200).json({
             message:'URL shortend successfully',
-            shortUrl:`${req.protocol === 'https' || req.get('X-Forwarded-Proto') === 'https' ? 'https' : 'https'}://minilynk/${url.shortId}`
+            shortUrl:`${req.protocol === 'https' || req.get('X-Forwarded-Proto') === 'https' ? 'https' : 'https'}://${req.get('host')}/${url.shortId}`
         });
     }catch(err){
         return res.status(500).json({ message: 'Error in shortening URL' });
